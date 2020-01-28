@@ -1,0 +1,262 @@
+:root {
+  --primary-color: #347474;
+  --light-color: #fff;
+  --dark-color: #111;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+  color: var(--dark-color);
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+p,
+li {
+  font-size: 1.4rem;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  color: var(--light-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bg-add {
+  background: #1fa2ff;
+  color: var(--light-color) !important;
+}
+
+.bg-error {
+  background: #ff416c;
+}
+.bg-edit {
+  background: #f37335;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #2a5951,
+    #67815a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.login,
+.list-view {
+  width: 30rem;
+  min-height: 20rem;
+  box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--light-color);
+}
+
+.login .login-img {
+  position: relative;
+}
+
+.login .login-img .login-content {
+  position: absolute;
+  left: 50%;
+  color: var(--light-color);
+  top: 30%;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 70%;
+}
+
+.login .login-img .login-content h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.login .login-img .login-content p {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.login .login-img img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  display: block;
+}
+
+.login .login-form {
+  background-color: #fff;
+  min-height: 20rem;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.login .login-form .form-group {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.login .login-form .form-group input {
+  width: 100%;
+  padding: 1rem 1.6rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.login .login-form .form-group input:focus + label,
+.login .login-form .form-group input:valid + label {
+  transform: translateY(-1.8rem);
+}
+
+.login .login-form .form-group label {
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: 0.5s ease;
+  background-color: var(--light-color);
+  letter-spacing: 1.5px;
+}
+
+.login .login-form button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+/* LIST VIEW */
+
+.list-view {
+  width: 50rem;
+  padding: 2rem;
+}
+.list-view-wrapper h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.list-view-wrapper ul li img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  margin-top: 0.5rem;
+}
+
+.list-view-wrapper ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+}
+
+.list-view-wrapper ul:nth-child(even),
+.list-view-wrapper ul:nth-child(even) a {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.list-view-wrapper ul:nth-child(odd) a {
+  color: var(--dark-color);
+}
+
+.list-view-wrapper ul li img {
+  border-radius: 50%;
+}
+.list-view-wrapper ul li:nth-child(1) {
+  flex: 0 0 15%;
+  padding-left: 1rem;
+}
+
+.list-view-wrapper ul li:nth-child(2) {
+  flex: 0 0 35%;
+}
+
+.list-view-wrapper ul li:nth-child(3) {
+  flex: 0 0 25%;
+}
+
+.list-view-wrapper ul li:nth-child(4) {
+  flex: 0 0 25%;
+}
+
+.list-view-wrapper ul li:nth-child(4) a {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.options ul {
+  display: flex;
+  justify-content: space-between;
+}
+.options ul li {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.options ul li p {
+  font-weight: bold;
+  color: #ef473a;
+}
+
+.options ul li a {
+  font-weight: bold;
+  color: #71b280;
+}
+
+/* OPTION NAV ADD USER/EDIT*/
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* VIEW USER INFO */
+
+.view-info {
+  padding: 2rem;
+}
+.view-info h2 {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 0.5rem;
+}
+
+.view-info p {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+}
